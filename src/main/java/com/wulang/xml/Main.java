@@ -11,5 +11,6 @@ public class Main {
         System.out.println(genericFunction1.getA());
         System.out.println(genericFunction2.getA());
     }
+
 }
 
