@@ -1,4 +1,4 @@
-package com.wulang.xml;
+package com.wulang.xml.domain;
 
 public class GenericFunction {
     private String a;

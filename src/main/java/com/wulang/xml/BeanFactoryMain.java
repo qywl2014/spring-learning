@@ -1,5 +1,7 @@
 package com.wulang.xml;
 
+import com.wulang.xml.domain.GenericFunction;
+import com.wulang.xml.domain.GenericFunctionFactoryBean;
 import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
@@ -20,7 +22,14 @@ public class BeanFactoryMain {
         DefaultListableBeanFactory factory = new DefaultListableBeanFactory(); // <2>
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(factory); // <3>
         reader.loadBeanDefinitions(resource);
+
         GenericFunction genericFunction1=(GenericFunction)factory.getBean("1");
         System.out.println(genericFunction1.getA());
+
+        GenericFunction myFactoryBean=(GenericFunction)factory.getBean("myFactoryBean");
+        System.out.println(myFactoryBean.getA());
+
+        GenericFunctionFactoryBean genericFunctionFactoryBean=factory.getBean(GenericFunctionFactoryBean.class);
+        System.out.println(genericFunctionFactoryBean.getObjectType());
     }
 }

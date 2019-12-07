@@ -5,14 +5,15 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd"
 >
 
-    <bean id="1" class="com.wulang.xml.GenericFunction">
-        <constructor-arg name="a" value="1"></constructor-arg>
+    <bean id="1" class="com.wulang.xml.domain.GenericFunction">
+        <constructor-arg name="a" value="1"/>
     </bean>
-    <bean id="2" class="com.wulang.xml.GenericFunction">
-        <constructor-arg name="a" value="2"></constructor-arg>
-        <constructor-arg name="b" value="2"></constructor-arg>
+    <bean id="2" class="com.wulang.xml.domain.GenericFunction">
+        <constructor-arg name="a" value="2"/>
+        <constructor-arg name="b" value="2"/>
     </bean>
-    <!--<bean id="User" class="com.wulang.xml.GenericFunction">-->
+    <bean id="myFactoryBean" class="com.wulang.xml.domain.GenericFunctionFactoryBean"/>
+    <!--<bean id="User" class="com.wulang.xml.domain.GenericFunction">-->
         <!--<constructor-arg name="a" value="1"></constructor-arg>-->
     <!--</bean>-->
 </beans>

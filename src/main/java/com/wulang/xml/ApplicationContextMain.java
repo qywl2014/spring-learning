@@ -1,9 +1,10 @@
 package com.wulang.xml;
 
+import com.wulang.xml.domain.GenericFunction;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Main {
+public class ApplicationContextMain {
     public static void main(String[] args) {
         ApplicationContext applicationContext=new ClassPathXmlApplicationContext("my-container.xml");
         GenericFunction genericFunction1=(GenericFunction)applicationContext.getBean("1");
