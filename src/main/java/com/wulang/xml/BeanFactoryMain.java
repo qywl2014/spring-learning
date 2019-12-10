@@ -16,12 +16,17 @@ public class BeanFactoryMain {
         System.out.println(genericFunction1.getA());
     }
 
-    @Test
-    public void defaultListableBeanFactoryTest(){
+    public static DefaultListableBeanFactory getBeanFactory(){
         ClassPathResource resource = new ClassPathResource("my-container.xml"); // <1>
         DefaultListableBeanFactory factory = new DefaultListableBeanFactory(); // <2>
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(factory); // <3>
         reader.loadBeanDefinitions(resource);
+        return factory;
+    }
+
+    @Test
+    public void defaultListableBeanFactoryTest(){
+        DefaultListableBeanFactory factory = getBeanFactory();
 
         GenericFunction genericFunction1=(GenericFunction)factory.getBean("1");
         System.out.println(genericFunction1.getA());
@@ -31,5 +36,14 @@ public class BeanFactoryMain {
 
         GenericFunctionFactoryBean genericFunctionFactoryBean=factory.getBean(GenericFunctionFactoryBean.class);
         System.out.println(genericFunctionFactoryBean.getObjectType());
+    }
+
+    @Test
+    public void testDependsOn(){
+        DefaultListableBeanFactory factory = getBeanFactory();
+
+        GenericFunction genericFunction1=(GenericFunction)factory.getBean("2");
+        System.out.println(genericFunction1.getApple());
+        System.out.println(genericFunction1.getOrange());
     }
 }

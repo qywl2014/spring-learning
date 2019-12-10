@@ -9,11 +9,13 @@
         <constructor-arg name="a" value="1"/>
     </bean>
     <bean id="2" class="com.wulang.xml.domain.GenericFunction">
-        <constructor-arg name="a" value="2"/>
+        <constructor-arg name="a" value="1"/>
         <constructor-arg name="b" value="2"/>
+        <constructor-arg name="orange" ref="orange"/>
+        <property name="apple" ref="apple"/>
+        <property name="c" value="3"/>
     </bean>
     <bean id="myFactoryBean" class="com.wulang.xml.domain.GenericFunctionFactoryBean"/>
-    <!--<bean id="User" class="com.wulang.xml.domain.GenericFunction">-->
-        <!--<constructor-arg name="a" value="1"></constructor-arg>-->
-    <!--</bean>-->
+    <bean id="apple" class="com.wulang.xml.domain.Apple"/>
+    <bean id="orange" class="com.wulang.xml.domain.Orange"/>
 </beans>
