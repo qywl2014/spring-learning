@@ -1,7 +1,7 @@
-package com.wulang.xml;
+package com.wulang.spring.xml;
 
-import com.wulang.xml.domain.GenericFunction;
-import com.wulang.xml.domain.GenericFunctionFactoryBean;
+import com.wulang.spring.xml.domain.GenericFunction;
+import com.wulang.spring.xml.domain.GenericFunctionFactoryBean;
 import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;

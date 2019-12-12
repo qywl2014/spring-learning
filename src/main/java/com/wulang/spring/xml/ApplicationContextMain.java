@@ -1,6 +1,6 @@
-package com.wulang.xml;
+package com.wulang.spring.xml;
 
-import com.wulang.xml.domain.GenericFunction;
+import com.wulang.spring.xml.domain.GenericFunction;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

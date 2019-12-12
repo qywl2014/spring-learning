@@ -1,6 +1,6 @@
-package com.wulang.spring;
+package com.wulang.spring.annotation;
 
-import com.wulang.spring.beans.Dog;
+import com.wulang.spring.annotation.beans.Dog;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;

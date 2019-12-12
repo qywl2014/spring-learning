@@ -1,4 +1,4 @@
-package com.wulang.spring.beans;
+package com.wulang.spring.annotation.beans;
 
 import org.springframework.stereotype.Component;
 

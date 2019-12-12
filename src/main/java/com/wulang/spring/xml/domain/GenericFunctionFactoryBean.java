@@ -1,4 +1,4 @@
-package com.wulang.xml.domain;
+package com.wulang.spring.xml.domain;
 
 import org.springframework.beans.factory.FactoryBean;
 
